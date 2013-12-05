@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=1024, user-scalable=no">
+		<title>HTML Elements: Layout and Positioning</title>
+		<!-- Required stylesheet -->
+		<link rel="stylesheet" href="core/deck.core.css">		
+
+		<!-- Style theme. More available in /themes/style/ or create your own. -->
+		<link rel="stylesheet" href="themes/style/web-2.0.css">
+
+		<style>
+			.characteristics {
+				margin: 0 0 40px;
+			}
+
+			.demo {
+
+			}
+			.demo hr {
+				margin: 40px 0;
+				border: 1px solid purple;
+			}
+
+			.protip {
+				clear:both;
+			}
+
+			h2:after, h3:after, h3:after {
+				content:':';
+			}
+
+			span.smaller {
+				font-size: .6em;
+			}
+
+			.demoBody {
+				position:relative; 
+				clear:both;
+			}
+
+			.demoBody p {
+				 border: 5px orange dashed;
+			}
+		</style>
+		
+		<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+		<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+		
+		<!-- Required Modernizr file -->
+		<script src="modernizr.custom.js"></script>
+	</head>
+	<body class="deck-container">
+		<section class="slide">
+			<h1>HTML Elements:<br>Layout and Positioning</h1>
+		</section>
+		<section class="slide">
+			<h2>Inline Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Flows with the line (text), soft wraps within container </li>
+					<li>Width is determined by contents</li>
+					<li>Height is determined by contents</li>
+					<li>Setting Width or Height has no impact</li>
+				</ul>
+			</section>
+			<section class="example">
+				<h3>Examples</h3>
+				<div>&lt;span&gt;, &lt;a&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;code&gt;, &lt;abbr&gt;, &lt;small&gt;, &lt;i&gt;, &lt;b&gt;  </div>
+			</section>				
+		</section>
+
+		<section class="slide">
+			<h2>Inline Elements</h2>
+			<section class="demo">		
+				<h3>Demo</h3>
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="background:blue; color:white; padding: 30px; ">Inline Is Here</span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, <span style="background:rgba(0, 0, 0, .5); height: 200px;color:white; border: 1px black solid">Inline is here <span class="smaller">(height 200px)</span> <span style="background:rgba(255, 255, 255, .5); width: 900px; color:blue; border: 1px red solid; padding: 5px;" >Inline Inside Inline <span class="smaller">(width 900px)</span></span></span>aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+			</section>	
+		</section>
+		<section class="slide">
+			<h2>Block Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Begins and ends on a new line</li>
+					<li>Width is determined by container</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+				</ul>
+			</section>
+			<section class="example">
+				<h3>Examples</h3>
+				<div>&lt;div&gt;, &lt;h1-h6&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;main&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;table&gt; <span class="smaller">(quirky)</span>, &lt;fieldgroup&gt;</div>
+			</section>
+		</section>	
+		<section class="slide">
+			<h2>Block Elements</h2>
+			<section class="demo">
+				<h3>Demo</h3>
+				<div style="background:blue; color:white; padding: 30px">This Is A Block<div style="background:rgba(255, 255, 255, .5); height: 200px; padding:20px">Block Inside Block <span class="smaller">(height 200px)</span><div style="background:rgba(255, 255, 255, .5); width: 50%"> Block Inside Block Inside Block <span class="smaller">(width 50%)</span></div><div style="background:rgba(255, 255, 255, .5); width: 40%"> Block Inside Block Inside Block <span class="smaller">(width 40%)</span></div></div></div>
+			</section>
+		</section>			
+		<section class="slide">
+			<h2>Inline-Block Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Flows with the line (text), soft wraps within container</li>
+					<li>Width is determined by contents</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+					<li>Setting height impacts the line height</li>
+				</ul>
+			</section>
+			<section class="example">
+				<h3>Examples</h3>
+				<div>&lt;img&gt;, &lt;iframe&gt;, &lt;button&gt;, &lt;textarea&gt; &lt;input&gt;, &lt;select&gt;, &lt;video&gt;, &lt;audio&gt;  </div>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Inline-Block Elements</h2>
+			<section class="demo">
+				<h3>Demo</h3>
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="display:inline-block; background:blue; color:white; padding:30px; ">Inline-block Is Here</span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, <span style="display:inline-block; background:rgba(0, 0, 0, .5); height: 200px;color:white; border: 1px black solid">Inline-block Is Here <span class="smaller">(height 200px)</span> <span style="display:block; background:rgba(255, 255, 255, .5); width: 900px; color:blue; border: 1px red solid; padding: 5px;" >Block Inside Inline-block <span class="smaller">(width 900px)</span></span></span>aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Choosing the Right Element</h2>
+			<h3>If It Goes With the Flow</h3>
+			<ul>
+				<li>Use &lt;a&gt;, &lt;video&gt;, &lt;img&gt;, &lt;input&gt;, and etc. when those functions or media types are reqiured</li>
+				<li>Use &lt;span&gt; for pretty much everything else</li>
+				<li>&lt;abbr&gt;, &lt;i&gt;, &lt;b&gt;, &lt;em&gt;, &lt;strong&gt;, and <abbr>etc.</abbr> have well defined semantics for web pages but are a bit controversial for web applications. <i>We need to have clear guidelines when choosing these elements.</i></li>
+			</ul>
+			<h3>If It Looks Like a Block and Acts Like a Block</h3>
+			<ul>
+				<li>Use &lt;header&gt;,&lt;footer&gt;, &lt;main&gt;, &lt;div class=&quot;main&quot;&gt; for page structure</li>
+				<li>Use &lt;p&gt; for paragraphs</li>
+				<li>Use &lt;h1&gt;-&lt;h6&gt; for headings</li>
+				<li>Use &lt;div&gt; for pretty much everything else</li>
+				<li>&lt;section&gt;, &lt;aside&gt;, and &lt;article&gt;  have well defined semantics for web pages but are a bit controversial for web applications. <i>We need to have clear guidelines when choosing these elements.</i></li>
+			</ul>
+			<div class="slide">
+				<p><strong>Choose the element that is behaving closest to the design to avoid excessive styling</strong>  <em>You will be glad you did</em></p>
+				<p><strong>Don't put block elements inside inline elements</strong>	<em>You're doing it wrong</em></p>
+			</div>
+		</section>
+		<section class="slide">
+			<h1>Positioning Elements</h1>
+		</section>
+		<section class="slide">
+			<h2>Floating Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Removes the element from the natural flow. Inline elements and text will flow around it</li>
+					<li>Width is determined by contents</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+					<li>Floated element does not influence the size of its container *</li>
+				</ul>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Floating Elements</h2>
+			<section class="demo">
+				<h3>Demo</h3>
+
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="background:blue; color:white; padding: 30px; ">Inline Was Here</span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, <span style="background:rgba(0, 0, 0, .5); height: 200px;color:white; border: 1px black solid">Inline Was Here <span class="smaller">(height 200px)</span> <span style="background:rgba(255, 255, 255, .5); width: 900px; color:blue; border: 1px red solid; padding: 5px;" >Inline Inside Inline <span class="smaller">(width 900px)</span></span></span>aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="background:blue; color:white; padding: 30px; float:left; ">Inline Is Here <span class="smaller">(float left)</span></span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, <span style="background:rgba(0, 0, 0, .5); height: 300px;color:white; border: 1px black solid;float:right;">Inline Is Here <span class="smaller">(float:right)</span> <span style="background:rgba(255, 255, 255, .5); width: 900px; color:blue; border: 1px red solid; padding: 5px;" >Inline Inside Inline <span class="smaller">(width 900px)</span></span></span>aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Floating Elements</h2>
+			<aside class="protip">
+				<h3>Pro-tips</h3>
+				<ul>
+					<li>For best cross-browser compatability, when using <code>float: left|right</code> always set <code>display:block</code></li>
+					<li>For accessiliblity don't float elements unless they visually display in the same order as the HTML markup</li>
+					<li> * Extra CSS can be used to "enclose" a floated element</li>
+				</ul>
+			</aside>
+		</section>
+		<section class="slide">
+			<h2>Relative Positioned Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Shifts the element relatively from its normal flow but doesn't alter the line</li>
+					<li>Inline width is determined by contents</li>
+					<li>Block width is determined by container</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+					<li>Relatively positioned element influence the size of its container</li>
+					<li>Affects the positioning of its contents</li>
+				</ul>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Relative Positioned Elements</h2>
+			<section class="demo">
+				<h3>Demo</h3>
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="background:blue; color:white; padding: 10px; position:relative; top:50px; left:50px; ">Inline Is Here <span class="smaller">(relative 50px top &amp; left)</span></span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+				<div class="demoBody">
+					<div style="background:blue; color:white;">This is a block<div style="background:rgba(255, 255, 103, .5); height: 200px; position:relative; top:50px; left:50px"> Block Inside Block <span class="smaller">(relative 50px top &amp; left)</span><div style="background:rgba(255, 255, 255, .5); width: 50%"> Block Inside Block Inside Block</div></div></div>
+				</div>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Absolute Positioned Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Moves the element out of the line but doesn't affect the flow of other elements</li>
+					<li>Width is determined by contents</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+					<li>Rendered Top/Left (or Bottom/Right) of its first relatively positioned ancestor or body</li>
+					<li>Does not influence the size of its container *</li>
+				</ul>
+			</section>
+    	</section>
+		<section class="slide">
+			<h2>Absolute Positioned Elements</h2>
+			<section class="demo">
+				<h3>Demos</h3>
+				<div class="demoBody">
+					<p>Lorem ipsum dolor sit amet, <span style="background:blue; color:white; padding: 10px; ">Inline Is Here</span> consectetur adipiscing elit. Aenean at augue faucibus, pretium justo eu, aliquet tellus. Integer id vestibulum lacus. Quisque aliquet, odio et eleifend imperdiet, nulla nunc blandit metus, lacinia viverra diam lectus sed lorem. Ut sit amet varius lorem. Maecenas iaculis, libero in commodo eleifend, augue felis sollicitudin magna, quis feugiat libero libero in eros. Praesent dolor nisl, malesuada eu luctus fermentum, <span style="background:rgba(0, 0, 0, .5); height: 200px;color:white; border: 1px black solid; position:absolute; top: 10px; right:20px;">Inline Is Here <span class="smaller">(Absolute top:10px right:20px)</span><span style="background:rgba(255, 255, 255, .5); width: 900px; color:blue; border: 1px red solid; padding: 5px;" >Inline Inside Inline <span class="smaller">(width 900px)</span></span></span>aliquet at massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas facilisis lectus vel varius pharetra. Nam vel sodales turpis. Nulla nec tellus hendrerit, tincidunt urna vitae, congue quam. Mauris turpis augue, venenatis at sodales at, ultricies in nisi.</p>
+				</div>
+				<hr style="clear:both">
+				<div class="demoBody">
+					<div style="background:blue; color:white; padding: 20px">
+						This is a block
+						<div style="background:rgba(255, 255, 255, .5); height: 200px;"> 
+							Block Inside Block <span class="smaller">(Static)</span>
+							<div style="background:rgba(0,0,0, .5); width: 50%; position:absolute; top:25px; left:25px">
+								Block Inside Block Inside Block <span class="smaller">(Absolute top:25px left:25px)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr style="clear:both">
+				<div class="demoBody">
+					<div style="background:blue; color:white; padding: 20px">
+						This is a block
+						<div style="background:rgba(255, 255, 255, .5); height: 200px; position:relative"> 
+							Block Inside Block <span class="smaller">(Relative)</span>
+							<div style="background:rgba(0,0,0, .5); width: 50%; position:absolute; top:25px; left:25px">
+								Block Inside Block Inside Block <span class="smaller">(Absolute top:25px left:25px)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr style="clear:both">
+				<div class="demoBody">
+					<div style="background:blue; color:white; padding: 20px">
+						This is a block
+						<div style="background:rgba(255, 255, 103, .5); height: 200px; position:absolute; top:0; right:0;"> 
+							Block Inside Block <span class="smaller">(Absolute top:0 right:0)</span>
+							<div style="background:rgba(0,0,0, .5); width: 50%; position:absolute; top:25px; left:25px">
+								Block Inside Block Inside Block <span class="smaller">(Absolute top:25px left:25px)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr style="clear:both">
+				<a href="positionTest.html" target="_blank">Absolute Blocks Demo</a>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Absolute Positioned Elements</h2>
+			<aside class="protip">
+				<h3>Pro-tips</h3> 
+				<ul>
+					<li>Absolutely positioned element acts as a relative container to its content that is absolutlely positioned</li>
+					<li>Setting Top and Bottom ignores Bottom</li>
+					<li>Setting Left and Right ignores Right</li>
+				</ul>
+			</aside>
+
+		</section>
+		<section class="slide">
+			<h2>Fixed Positioned Elements</h2>
+			<section class="characteristics">
+				<h3>Characteristics</h3>
+				<ul>
+					<li>Moves the element out of the line but doesn't affect the flow of other elements</li>
+					<li>Width is determined by contents</li>
+					<li>Height is determined by contents</li>
+					<li>Width and Height can be explictly set</li>
+					<li>Rendered Top/Left (or Bottom/Right) of the viewport</li>
+					<li>Does not move with scrolling of container</li>
+					<li>Does not influence the size of its container *</li>
+				</ul>
+			</section>
+			<section class="demo slide">
+				<h3>Demos</h3>
+				<a href="positionTest2.html" target="_blank">Fixed Blocks Demo</a>
+			</section>
+		</section>
+		<section class="slide">
+			<h2>Fixed Positioned Elements</h2>
+			<aside class="protip">
+				<h3>Pro-tips</h3> 
+				<ul>
+					<li>Tablets and phones have a hardtime with this layout</li>
+					<li>Fixed positioned element acts as a relative container to its content that is absolutlely positioned</li>
+					<li>Setting Top and Bottom ignores Bottom</li>
+					<li>Setting Left and Right ignores Right</li>
+				</ul>
+			</aside>
+		</section>
+		<section class="slide">
+			<h1>Q &amp; A</h1>
+		</section>
+
+		<section class="slide">
+			<h1>The End</h1>
+		</section>
+
+		<!-- Required JS files. -->
+		<script src="jquery-1.7.2.min.js"></script>
+		<script src="core/deck.core.js"></script>
+
+		<!-- Initialize the deck. You can put this in an external file if desired. -->
+		<script>
+			$(function() {
+				$.deck('.slide');
+			});
+</script>
+	</body>
+</html>

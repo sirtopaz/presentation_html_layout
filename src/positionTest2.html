@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fixed Position Demo</title>
+		<style>
+			body {
+				margin: 25px;
+			}
+			h1 {
+				font-size: 2.5rem;
+			}
+
+			li {
+				font-size: 1.5rem;
+			}
+			ul {
+
+			}
+
+			#contents {
+				margin: 1% auto 0;
+				padding: 0 1%;
+				width: 50%;
+				background:linear-gradient(to bottom, #FFF, #AADDCC);
+				height: 10000px;
+				border: 2px dashed grey;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="position:fixed; top:0; left:0; bottom:0; right:0; height:450px; width:450px; background:pink"></div>
+		<div style="position:fixed; bottom:0; right:0; top:0; left:0; height:400px; width:400px; background:blue"></div>
+		<div style="position:fixed; bottom:0; top:0; height:350px; width:350px; background:green"></div>
+		<div style="position:fixed; right:0; left:0; height:300px; width:300px; background:purple"></div>
+		<div style="position:fixed; bottom:0; right:0; height:450px; width:450px; background:orange">
+			<div style="position:fixed; top:0; right:0; height:350px; width:350px; background:skyblue"></div>
+			<div style="position:absolute; top:0; left:0; height:150px; width:150px; background:red"></div>
+		</div>
+
+		<div id="contents">
+		<h1>Fixed Position Styles</h1>
+		<ul>
+			<li><span style="color:pink;">PINK</span> - top:0; left:0; bottom:0; right:0;</li>
+			<li><span style="color:blue;">BLUE</span> - bottom:0; right:0; top:0; left:0; </li>
+			<li><span style="color:green;">GREEN</span> - bottom:0; top:0;</li>
+			<li><span style="color:purple;">PURPLE</span> - right:0; left:0;</li>
+			<li><span style="color:orange;">ORANGE</span> - bottom:0; right:0;
+				<ul>
+					<li><span style="color:skyblue;">SKY BLUE</span> - top:0; right:0;</li>
+					<li><span style="color:red;">RED</span> - top:0; left:0; (Absolute)</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+
+	</body>
+</html>
